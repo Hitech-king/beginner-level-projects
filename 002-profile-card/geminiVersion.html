@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #e6e6e6;
+            /* Light gray background to match the image */
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .profile-card {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 320px;
+            /* Adjust as needed */
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .header-bg {
+            background-color: #f7d2d8;
+            /* Pinkish color from the image */
+            height: 120px;
+            /* Adjust as needed */
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            /* To position the profile pic correctly */
+        }
+
+        .profile-pic-container {
+            position: absolute;
+            bottom: -50px;
+            /* Half of the image height to center it visually */
+            background-color: #fff;
+            /* White circle background */
+            border-radius: 50%;
+            padding: 5px;
+            /* Padding for the white border around the image */
+            box-shadow: 0 0 0 3px #fff;
+            /* White border effect */
+        }
+
+        .profile-pic {
+            width: 100px;
+            /* Adjust size as needed */
+            height: 100px;
+            /* Adjust size as needed */
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .online-indicator {
+            position: absolute;
+            bottom: 8px;
+            /* Adjust position relative to the profile pic */
+            right: 8px;
+            /* Adjust position relative to the profile pic */
+            width: 15px;
+            height: 15px;
+            background-color: #00ff00;
+            /* Green color */
+            border-radius: 50%;
+            border: 2px solid #fff;
+            /* White border for the indicator */
+        }
+
+        .content {
+            padding: 60px 20px 20px;
+            /* Adjust top padding to account for the profile pic */
+        }
+
+        .name {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .title {
+            font-size: 1.1em;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            font-family: 'Playfair Display', serif;
+            /* Italicized font from the image */
+            font-style: italic;
+            font-size: 0.95em;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            padding: 0 15px;
+            /* Add some horizontal padding */
+        }
+
+        .social-links {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .social-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .social-item i {
+            margin-right: 10px;
+            font-size: 1.2em;
+            color: #777;
+            /* Slightly darker icon color */
+        }
+
+        .social-item:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile-card">
+        <div class="header-bg">
+            <div class="profile-pic-container">
+                <img src="idd.webp" alt="Profile Picture" class="profile-pic">
+                <span class="online-indicator"></span>
+            </div>
+        </div>
+        <div class="content">
+            <h2 class="name">Matt Adetola</h2>
+            <p class="title">Product Design</p>
+            <p class="description">
+                I joined this platform to increase my knowledge about UI/UX designs,
+                i will also love to learn more from friends and organizers on this
+                space.
+            </p>
+            <div class="social-links">
+                <div class="social-item">
+                    <i class="fab fa-twitter"></i>
+                    <span>Lency1013</span>
+                </div>
+                <div class="social-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>kayode Emmanuel</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

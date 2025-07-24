@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    
+    background: rgb(248, 238, 224);
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+
+.card{
+    height: 500px;
+    width: 300px;
+    /* background-color: aqua; */
+    
+    
+       
+}
+
+.upper{
+    background-color: palevioletred;
+    height:250px ;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+}
+
+.image{
+    position: absolute;
+    /* bottom: 50px; */
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+
+.lower{
+    background-color: white;
+    height: 250px;
+    margin: 0;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+
+}

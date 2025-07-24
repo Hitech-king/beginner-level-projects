@@ -1,19 +1,39 @@
+body{
+    margin: 0;
+}
+
 .container{
+    height: 100vh;
+    width: 100vw;
+    
+   
+    background-color: aquamarine;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.quoteContainer{
     height: 100px;
     width: 500px;
     background-color: gray;
     color:white;
-    font-size: large;
-    
+    font-size: larger;
+
     text-align: center;
     border: 3px solid aqua;
-    align-items: center;
-    justify-content: center;
-    
     margin: 5px;
     padding: 5px;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+
+    position: relative;
+
 }
 
+.person{
+    position: absolute;
+    right: 50px;
+
+}

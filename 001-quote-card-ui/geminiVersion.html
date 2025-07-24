@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Quotes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic reset and font */
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif; /* Using Inter font */
+            display: flex; /* Use flexbox on body for full height */
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            flex-direction: column; /* Allow content to stack if needed */
+        }
+
+        /* Container for centering content */
+        .container {
+            flex-grow: 1; /* Allow container to take available space */
+            width: 100vw; /* Occupy full viewport width */
+            background-color: aquamarine;
+            display: flex;
+            flex-direction: column; /* Stack quote containers vertically on small screens */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            padding: 20px; /* Add some padding around the content */
+            box-sizing: border-box; /* Include padding in element's total width/height */
+        }
+
+        /* Individual quote container styling */
+        .quoteContainer {
+            /* Instead of fixed width, use max-width and a percentage */
+            width: 90%; /* Take 90% of the parent's width */
+            max-width: 500px; /* But don't exceed 500px on larger screens */
+            /* Remove fixed height to allow content to dictate height */
+            min-height: 100px; /* Ensure a minimum height */
+            background-color: gray;
+            color: white;
+            font-size: 1.2rem; /* Use relative unit for font size */
+            text-align: center;
+            border: 3px solid aqua;
+            margin: 10px 0; /* Adjust margin for vertical stacking */
+            padding: 15px; /* Increase padding for better spacing */
+            box-sizing: border-box; /* Include padding in element's total width/height */
+            position: relative; /* Essential for absolute positioning of .person */
+            border-radius: 8px; /* Add rounded corners */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Push quote to top, person to bottom */
+            align-items: center; /* Center text horizontally */
+        }
+
+        .quote {
+            margin-bottom: 15px; /* Space between quote and person */
+            font-style: italic;
+            line-height: 1.4; /* Improve readability */
+        }
+
+        .person {
+            position: absolute; /* Keep absolute positioning */
+            bottom: 10px; /* Position from the bottom */
+            right: 15px; /* Position from the right */
+            font-size: 0.9rem; /* Smaller font for the person's name */
+            font-weight: bold;
+            color: lightgray; /* Slightly different color for distinction */
+        }
+
+        /* Media Queries for smaller screens */
+        @media (max-width: 600px) {
+            .quoteContainer {
+                font-size: 1rem; /* Slightly smaller font on very small screens */
+                padding: 10px; /* Reduce padding */
+                min-height: 80px; /* Adjust min-height */
+            }
+
+            .person {
+                font-size: 0.8rem; /* Smaller font for person */
+                right: 10px;
+                bottom: 8px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .quoteContainer {
+                width: 95%; /* Take more width on very narrow screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="quoteContainer">
+            <p class="quote">"The journey of a thousand miles begins with a single step."</p>
+            <p class="person">- LAO TZU</p>
+        </div>
+        <div class="quoteContainer">
+            <p class="quote">"Be positive"</p>
+            <p class="person">- Anonymous</p>
+        </div>
+        <div class="quoteContainer">
+            <p class="quote">"The only way to do great work is to love what you do."</p>
+            <p class="person">- Steve Jobs</p>
+        </div>
+    </div>
+</body>
+</html>
