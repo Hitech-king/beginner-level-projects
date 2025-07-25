@@ -84,7 +84,7 @@ hr {
 
 a {
   /* text-decoration: none; */
-  font-size: 50%;
+  font-size:  24px;
   color: palevioletred;
 }
 
@@ -96,4 +96,8 @@ a {
   text-decoration: none;
   margin: 10px 20px;
   
+}
+
+.fa:hover {
+    opacity: 0.7;
 }
